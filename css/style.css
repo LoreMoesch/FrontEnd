@@ -1,0 +1,36 @@
+*
+{
+	box-sizing: border-box; /*para todos los elementos que tengan el borde tipo caja, que respeten el ancho y que
+	                         los padding funcionen correctamente*/
+}
+
+body
+{
+	font-family: "Asap" ;
+
+}
+
+nav a
+{
+	margin-left: 7.5px; /*  para todas las etiquetas a que esten dentro de nav para que no esten pegadas*/
+	margin-right: 7.5px;
+
+}
+
+a
+{
+	display: inline-block;
+}
+.container
+{
+	width: 1170px;
+	padding: 0 15;
+	margin: 0 auto; /*centra el contenedor */
+}
+
+.banner-home
+{
+	width: 100%; /*ancho*/
+	height: auto;  /*alto*/
+	display: block; /*para que lo tome como bloque y no quede espacio en el borde*/
+}
