@@ -13,16 +13,32 @@ body
 
 a
 {
-	display: inline-block;
+	display: inline-block; 
 }
 
+
+section
+{
+	position: relative;
+}
 
 .cabecera
 {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	background-color: rgb(7,19,48); /*#071330;*/
+	/*background-color: rgb(7,19,48); /*#071330;*/
+	position: fixed; /*para que el menú se mantenga fijo si estoy scrolleando*/                   /*menu fixed*/
+	top: 0;																			
+	left: 0;
+	width: 100%;
+	z-index: 999;		/*para que header que tiene el menú se coloque arriba*/ 
+}
 
+.cabecera .container
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .cabecera .link-logo
@@ -37,11 +53,12 @@ a
 	height: auto;
 }
 
-.cabecera .menu
+.cabecera .menu  /*optimizado con flex*/
 {
-	display: inline-block;
-	vertical-align: middle;
-	margin-left:66%;
+																	/*display: inline-block;
+																	vertical-align: middle;
+																	margin-left:60%;*/
+
 }
 
 
@@ -49,7 +66,7 @@ a
 {
 	margin-left: 7.5px;
 	margin-right: 7.5px;
-	color: rgba(230,154,35,0.8); /*red, green, blue, alfa(opacidad)*/
+	color: rgba(230,154,35,2); /*red, green, blue, alfa(opacidad)*/
 	color: #E69A23;
 	font-size: 13px; /*tamaño de la fuente del menú*/
 	font-weight: 600;  /*profundidad de la letra, si no se el tamaño le coloco bold*/
@@ -57,11 +74,7 @@ a
 	text-decoration: none; /*le quieto el subrayado*/
 	letter-spacing: 2px; /*espaciado entre letras*/
 	word-spacing: 5px; /*espacio entre palabras*/
-
-
 }
-
-
 
 .container
 {
@@ -70,14 +83,29 @@ a
 	margin: 0 auto; /*centra el contenedor */
 }
 
+.container-full
+{
+	width: 100%;
+	padding: 0 15;
+	margin: 0 auto; /*centra el contenedor */
+}
+
+.fila
+{
+	margin-left: -15px; /*para que quede alineado al container, ya que no lo puedo restar en .container porque cbiaría para todo*/
+	margin-right: -15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .columna
 {
-	padding-left: 15px;
+	padding-left: 15px;												/*todo esto es reemplazado en flexbox*/
 	padding-right: 15px;
-	display: inline-block;
-	margin-left: -1px;  
-	margin-right: -1px; /*como los elementos inline-block tienen un espacio entre cada uno, se los quito con margin -*/
-	vertical-align: top;
+	 														/*display: inline-block;
+															margin-left: -1px;  
+															margin-right: -1px; /*como los elementos inline-block tienen un espacio entre cada uno, se los quito con margin -*/
+															/*vertical-align: top;*/
 }
 
 .columna-100   
@@ -100,6 +128,42 @@ a
 	width: 25%;
 }
 
+.sin-padding
+{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.contenedor-cuadrado
+{
+	width: 100%;
+	padding-bottom: 100%;
+	position: relative;
+	overflow: hidden;    /*tolo lo que está fuera del cuadrado que se esconda*/
+}
+
+.contenedor-cuadrado img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.contenedor-cuadrado .contenido-cuadrado
+{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	padding-right: 30px;
+	padding-left:  30px;
+	top: -100%;                  /*en conjunto con overflow del contenedor-cuadrado para que se vaya fuera del cuadrado y se esconda*/
+	color: #fff;
+}
+
 .seccion
 {
 	padding-top: 60px;
@@ -110,9 +174,80 @@ a
 {
 	text-align: center; /*puede ser left, right, justify*/
 }
-.banner-home
+
+.justificar-texto
+{
+	text-align: justify;
+}
+
+.impotante
+{
+	font-style: italic;
+}
+
+.banner-home /*la imagen de fondo*/
 {
 	width: 100%; /*ancho*/
 	height: auto;  /*alto*/
 	display: block; /*para que lo tome como bloque y no quede espacio en el borde*/
+}
+
+.btn
+{
+	padding: 10px 30px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 15px; /*a todos los bordes que los redondee 15px*/
+	border-width: 2px;
+	border-style:solid;
+}
+
+.btn.boton-transparente
+{
+	background-color: transparent;
+	border-color: #FFCA31;
+	color:#FFCA31;
+	
+}
+.btn.boton-amarillo
+{
+	border-color: #FFC53D;
+	background-color: #FFC53D;
+	color: #824C00;
+}
+
+#banner
+{
+
+}
+
+#banner .container 
+{
+	position: absolute;	
+	top: 35%;
+	left: 0; /*para que lo lleve hacia la izq*/
+	right: 0; /*para que lleve a la derecha */  /*con left y right en 0 el contenido de la carta que da en el margen izq*/
+}
+
+#banner .container h1
+{
+	font-size: 60px;
+	color: #fff;
+	margin:0;   /*los h siempre tienen un margen*/
+}
+
+#banner .container p
+{
+	font-size: 20px;
+	color: #FFF492;
+	line-height: 1.5; /*espacio entre lineas*/
+}
+
+#lacarta
+{
+	/*background-image:url("../img/trama.png");    /*uso trama de background*/
+	/*position:relative;         * con esta linea y la de abajo la seccion carta se sube 100px
+	top: -100px;					y sigue formando parte del flujo (main)*/
+	
 }
