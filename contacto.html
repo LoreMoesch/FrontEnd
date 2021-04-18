@@ -6,7 +6,101 @@
 		<meta name="keywords" content="comida, restaurante">
 		<meta name="author" content="Lorena Moesch">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Restaurante Ñam Ñam - Bienvenidos</title>
+		<title>Restaurante Ñam Ñam - Contacto</title>
 		<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-		</head>
+		<link rel="stylesheet"  href="css/normalice.css">                 <!-- reiniciar estitlos a un formato minimo	 -->
+		<link rel="stylesheet"  href="css/style.css">			
+		<link rel="shortcut icon"  href="img/icono.png">
+		<script src="https://kit.fontawesome.com/c8ea5318af.js" crossorigin="anonymous"></script>
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+		<header class="cabecera">
+			<div class="container">
+				<a href="index.html" class="link-logo">              <!-- al apretar el logo que me lleve a la pagina de inicio -->
+					<img class="logo" src="img/logo.png" width="138" height="140">
+				</a>
+				<nav class="menu">
+					<a href="index.html#lacarta" >La carta</a> 	<!-- a la hora que cargue en index me lleve despacito hasta la carta -->
+					<!-- <a href="index.html#locales" >Locales</a> -->
+					<a href="nosotros.html" >Nosotros</a>
+					<a href="contacto.html" class="seleccionado" target="_self">Contacto</a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section id="banner" class="banner-contacto">
+				<img class="banner-home" src="img/contacto.jpg" width="1880" height="1245">
+				<div class="container">
+					<div class="fila fila-centrada">
+						<div class="columna columna-50"> <!-- que la columna ocupe el 50%-->
+							<h1 class="centrar-texto">Contáctanos</h1>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<section id="contacto" class="seccion">
+				<div class="container">
+					<div class="fila">
+
+						<div class="columna columna-50 derecha-texto columna-info-contacto orden">
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, quod dolorem molestiae minima! Consequuntur ipsum iste ex, expedita facilis sapiente officiis id labore enim explicabo totam obcaecati dolorem, repellat minima?</p>
+								<h2>Av. Quebracho Colorado Nº 11 - La Rioja - Argentina</h2>
+								<a href="tel:+5493804552354" class="telefono">+5493804552354</a>
+								<a href="mailito:restaurant@gmail.com" class="email">restaurante@gmail.com</a>
+						</div>
+
+						<div class="columna columna-50">
+							<form onsubmit="return false" id="frmcontacto" action="registro.php" method="post">
+								<div class="form-bloques">
+									<input id="nombre" class="form-input" type="text" placeholder="Nombre" name="nombre" required>
+								</div>
+								<div class="form-bloques">
+									<input id="email" class="form-input" type="email" placeholder="Email" name="email" required>
+								</div>
+								<div class="form-bloques">
+									<input id="asunto" class="form-input" type="asunto" placeholder="Asunto" name="asunto" required>
+								</div>
+								<div class="form-bloques">
+									<textarea id="mensaje" class="form-input" required name="mensaje" placeholder="Mensaje" ></textarea>
+								</div>
+								<div class="form-bloques form-bloque-boton">
+									<input type="submit" value="ENVIAR" class="btn boton-amarillo btn-enviar">
+								</div>
+							</form>
+						</div>
+							
+					</div>
+						
+				</div>
+			</section>	
+		</main>	
+		<footer>
+			<div class="prefooter">
+				<div class="container">
+					<div class="fila">
+						<div class="columna columna-100">
+							<div class="mapa">
+								<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=la%20rioja%20argentina&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pie">
+				<div class="container">
+						<div class="fila">
+							<div class="columna columna-33 empujar-33 empujar orden lista-redes">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</div>
+							<div class="columna columna-33 ">
+							 	&reg;Derechos reservados
+							</div>
+					    </div>
+				</div>
+			</div>		    
+		</footer>
+	</body>
 </html>	

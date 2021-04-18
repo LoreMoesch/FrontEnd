@@ -11,6 +11,9 @@
 		<link rel="stylesheet"  href="css/normalice.css">                 <!-- reiniciar estitlos a un formato minimo	 -->
 		<link rel="stylesheet"  href="css/style.css">			
 		<link rel="shortcut icon"  href="img/icono.png">
+		<script src="https://kit.fontawesome.com/c8ea5318af.js" crossorigin="anonymous"></script>
+		<script src="js/jquery.js"></script>
+	</head>	
 	<body >
 		<header class="cabecera">
 			<div class="container">
@@ -18,8 +21,7 @@
 					<img class="logo" src="img/logo.png" width="138" height="140">
 				</a>
 				<nav class="menu">
-					<a href="index.html#lacarta" >La carta</a> 	<!-- a la hora que cargue en index me lleve despacito hasta la carta -->
-					<a href="index.html#locales" >Locales</a>
+					<a href="index.html#lacarta" >La carta</a>
 					<a href="nosotros.html">Nosotros</a>
 					<a href="contacto.html" target="_self">Contacto</a>
 				</nav>
@@ -27,7 +29,8 @@
 		</header>
 		<main>
 			<section id="banner">
-				<img class="banner-home" src="img/imagen2.jpg" width="1880" height="1245"><div class="container">
+				<img class="banner-home" src="img/imagen2.jpg" width="1880" height="1245">
+				<div class="container">
 					<div class="fila">
 						<div class="columna columna-50"> <!-- que la columna ocupe el 50%-->
 							<h1>Lee nuestra Carta</h1>
@@ -41,15 +44,15 @@
 				<div class="container">
 					<div class="fila">
 						<div class="columna columna-100 centrar-texto">
-							<h1>La Carta</h1>
+							<h2 class="titulos">La Carta</h2>
 						</div>
 					</div>	 
-					<div class="fila">
-						<div class="columna columna-50 sin-padding">
+					<div class="fila margin-arriba columna">
+						<div class="columna columna-50 sin-padding orden">
 							<div class="contenedor-cuadrado"> 
 								<img src="img/imagen1.jpg">
 								<div class="contenido-cuadrado">
-										<h2>Comida peruana</h2>
+										<h2>Comida regional</h2>
 										<a href="#" class="btn boton-amarillo">Ver más</a>
 								</div>
 							</div>	
@@ -87,7 +90,7 @@
 									<div class="contenedor-cuadrado"> 
 										<img src="img/imagen6.jpg">
 										<div class="contenido-cuadrado">
-											<h2>Bebidas</h2>
+											<h2>Variedades</h2>
 											<a href="#" class="btn boton-amarillo">Ver más</a>
 										</div>
 									</div>
@@ -96,14 +99,40 @@
 						</div>
 					</div>
 				</div>
-			</section>		
+			</section>	
 		</main>	
 		<footer>
-			<div class="container">
+			<div class="prefooter">
+				<div class="container">
 					<div class="fila">
-						<div class="columna"></div>
+						<div class="columna columna-100">
+							<div class="mapa">
+								<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=la%20rioja%20argentina&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+							</div>
+						</div>
 					</div>
+				</div>
 			</div>
-		</footer>	
+			<div class="pie">
+				<div class="container">
+						<div class="fila">
+							<div class="columna columna-33 empujar-33 empujar orden lista-redes">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</div>
+							<div class="columna columna-33 ">
+							 	&reg;Lorena Moesch
+							</div>
+					    </div>
+				</div>
+			</div>		    
+		</footer>
+		<div class="trama"></div>
+		<div class="cuerpoimagen">
+			<img src="">
+			<a href="#" class="cerrarimagen"><i class="fas fa-times"></i></a>
+		</div>
+		<script src="js/funciones.js"></script>	
 	</body>
 </html>
